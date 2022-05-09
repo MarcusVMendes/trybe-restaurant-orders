@@ -52,4 +52,4 @@ class TrackOrders:
                 least_busy_day[item["day"]] = 1
             else:
                 least_busy_day[item["day"]] += 1
-        return max(least_busy_day, key=least_busy_day.get)
+        return min(least_busy_day, key=least_busy_day.get)
